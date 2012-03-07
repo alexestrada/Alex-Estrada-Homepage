@@ -1,0 +1,145 @@
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*                                                                           */
+/*                                                                           */
+/* Typography                                                                */
+/*                                                                           */
+/* ------------------------------------------------------------------------- */
+/* Headings, body text, lists, code, and more for a versatile and durable    */
+/* typography system                                                         */
+/*                                                                           */
+/*                                                                           */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+/* ========================================================================= */
+/*                                                                           */
+/* Body Text                                                                 */
+/*                                                                           */
+/* ========================================================================= */
+
+p {
+	margin: 0 0 (@baseLineHeight / 2) 0;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @grayLight;
+	vertical-align: top;
+	
+	&.lead {
+	}
+}
+
+
+
+/* ========================================================================= */
+/*                                                                           */
+/* Headings                                                                  */
+/*                                                                           */
+/* ========================================================================= */
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: normal;
+	color: @grayDark;
+	text-rendering: optimizelegibility; // Fix the character spacing for headings
+	
+	small {
+		font-weight: normal;
+		color: @grayLight;
+	}
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 26px;
+	margin: 0 0 @primaryMargin 0;
+	color: @black;
+	
+	small {
+		font-size: 18px;
+	}
+	
+	&.short {
+		margin-bottom: @primaryMargin / 2;
+	}
+	
+	&.tall {
+		margin-bottom: 2.5 * @primaryMargin;
+	}
+}
+
+h2 {
+	font-size: 18px;
+	line-height: 18px;
+	margin: 0 0 @primaryMargin 0;
+	font-weight: bold;
+	
+	small {
+		font-size: 12px;
+	}
+	
+	&.short {
+		margin-bottom: @primaryMargin / 2;
+	}
+	
+	&.tall {
+		margin-bottom: 2 * @primaryMargin;
+	}
+}
+
+h3 {
+	line-height: 24px;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0 0 @primaryMargin 0;
+	color: @gray;
+	
+	small {
+		font-size: 13px;
+	}
+	
+	&.short {
+		margin-bottom: @primaryMargin / 2;
+	}
+	
+	&.tall {
+		margin-bottom: 1.5 * @primaryMargin;
+	}
+}
+
+h4, h5, h6 {
+	margin: 0 0 (3 * (@primaryMargin / 4)) 0;	
+	color: @grayLight;
+	
+	&.short {
+		margin-bottom: @primaryMargin / 4;
+	}
+	
+	&.tall {
+		margin-bottom: 1.5 * @primaryMargin;
+	}
+}
+
+h4 {
+	font-size: 14px;
+	line-height: 14px;
+	
+	small {
+		font-size: 12px;
+	}
+}
+
+h5 {
+	font-size: 12px;
+	line-height: 12px;
+}

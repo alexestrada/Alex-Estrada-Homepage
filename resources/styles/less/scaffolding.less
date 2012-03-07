@@ -1,0 +1,281 @@
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*                                                                           */
+/*                                                                           */
+/* Scaffolding.less                                                          */
+/*                                                                           */
+/* ------------------------------------------------------------------------- */
+/* Basic and global styles for generating a grid system, structural layout,  */
+/* and page templates                                                        */
+/*                                                                           */
+/*                                                                           */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+/* ========================================================================= */
+/*                                                                           */
+/* Body                                                                      */
+/*                                                                           */
+/* ========================================================================= */
+
+body {
+	margin: 0;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @textColor;
+	background: none;
+	position: relative;
+}
+
+
+
+/* ========================================================================= */
+/*                                                                           */
+/* Links                                                                     */
+/*                                                                           */
+/* ========================================================================= */
+
+a {
+	color: @linkColor;
+	text-decoration: none;
+}
+
+a:hover {
+	color: @linkColorHover;
+	text-decoration: underline;
+}
+
+::selection {
+    background: @linkColor;
+    color: @white;
+}
+
+::-moz-selection {
+    background: @linkColor;
+    color: @white;
+}
+
+
+
+
+/* ========================================================================= */
+/*                                                                           */
+/* Stage                                                                     */
+/*                                                                           */
+/* ========================================================================= */
+
+#stage {
+	width: 100%;
+	height: 100%;
+	background: url(images/stage_bg.png) top left repeat;
+	
+	.inner-left {
+		width: 300px;
+		height: 100%;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		#gradient > .horizontal(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+		background-color: rgba(0, 0, 0, 0);
+	}
+	
+	.inner-right {
+		width: 300px;
+		height: 100%;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		#gradient > .horizontal(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+		background-color: rgba(0, 0, 0, 0);
+	}
+}
+
+
+
+/* ========================================================================= */
+/*                                                                           */
+/* Page                                                                      */
+/*                                                                           */
+/* ========================================================================= */
+
+#page {
+	padding: @primaryMargin;
+	background: url(images/page_bg.png) top left repeat;
+	float: left;
+	position: relative;
+	text-align: center;
+	@shadow:
+		0px 2px 5px 0px rgba(0, 0, 0, 1),
+		0px 5px 20px 0px rgba(0, 0, 0, 1);
+	.box-shadow(@shadow);
+	
+	h1 {
+		background: url(images/logo.png) top center no-repeat;
+		width: 600px;
+		height: 60px;
+		margin: 0 0 10px 0;
+		
+		span {
+			display: none;
+		}
+	}
+	
+	.grooveshark_logo {
+		display: inline-block;
+		background: url(images/grooveshark_logo.png) top left no-repeat;
+		width: 106px;
+		height: 16px;
+		margin: 0;
+		padding: 0;
+		vertical-align: middle;
+		.opacity(15);
+		
+		span {
+			display: none;
+		}
+		
+		&:hover {
+			background-position-y: -16px;
+			.opacity(100);
+		}
+	}
+}
+
+
+
+/* ========================================================================= */
+/*                                                                           */
+/* Header                                                                    */
+/*                                                                           */
+/* ========================================================================= */
+
+#header {
+	h1 {
+		background: url(images/logo.png) top center no-repeat;
+		width: 100%;
+		height: 60px;
+		margin: 0 0 10px 0;
+		
+		span {
+			display: none;
+		}
+	}
+	
+	p.lead {
+		line-height: 17px;
+		color: #BBB;
+		letter-spacing: 1px;
+	}
+	
+	.grooveshark_logo {
+		display: inline-block;
+		background: url(images/grooveshark_logo.png) top left no-repeat;
+		width: 106px;
+		height: 16px;
+		margin: 0 0 0 5px;
+		padding: 0;
+		vertical-align: top;
+		.opacity(15);
+		
+		span {
+			display: none;
+		}
+		
+		&:hover {
+			background-position-y: -16px;
+			.opacity(100);
+		}
+	}
+	
+	hr {
+		background: url(images/bow.png) top center no-repeat;
+		border: none;
+		height: 58px;
+		width: 100%;
+		margin: (@primaryMargin / 2) 0 (@primaryMargin / 2) 0;
+	}
+}
+
+
+
+/* ========================================================================= */
+/*                                                                           */
+/* Social Links                                                              */
+/*                                                                           */
+/* ========================================================================= */
+
+ul.social_links {
+   clear: left;
+   float: left;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   position: relative;
+   left: 50%;
+	.clearfix();
+	
+	li {
+		display: block;
+		float: left;
+		list-style: none;
+		margin: 0 (@primaryMargin / 2) 0 (@primaryMargin / 2);
+		padding: 0;
+		position: relative;
+		right: 50%;
+		
+		a {
+			display: block;
+			width: 40px;
+			height: 40px;
+			background: url(images/social_links.png) top left no-repeat;
+			
+			span {
+				display: none;
+			}
+			
+			&:hover {
+				background-position-x: -40px;
+			}
+			
+			&:active {
+				background-position-x: -80px;
+			}
+			
+			&.tumblr {
+				background-position-y: -40px;
+			}
+			
+			&.twitter {
+				background-position-y: -80px;
+			}
+			
+			&.dribbble {
+				background-position-y: -120px;
+			}
+			
+			&.pinterest {
+				background-position-y: -160px;
+			}
+		}
+	}
+}
+
+
+
+/* ========================================================================= */
+/*                                                                           */
+/* Footer                                                                    */
+/*                                                                           */
+/* ========================================================================= */
+
+footer {
+}

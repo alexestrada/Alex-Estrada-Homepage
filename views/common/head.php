@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{{ resource_url() }}styles/main.css">
